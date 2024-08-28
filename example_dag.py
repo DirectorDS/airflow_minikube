@@ -27,11 +27,11 @@ default_args = {
 }
 
 dag = DAG(
-    'pascals_triangle',
+    'pascal',
     default_args=default_args,
     description='DAG для генерации треугольника Паскаля',
     start_date=datetime(2023, 10, 1),
-    schedule_interval='@daily',
+    schedule_interval='44 11 * * *',
     catchup=False,  # Добавлено для предотвращения выполнения всех прошедших интервалов
 )
 
